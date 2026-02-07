@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Thangamalar M",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 10.2, "left": 133.8, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 56.3, "left": -67.4, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": 227.6,
+      "left": -102.8,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 92.6,
+      "left": 518.4,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "servo1:PWM", "uno:9", "green", [ "h38.4", "v-288.2", "h192" ] ],
+    [ "servo1:V+", "uno:5V", "green", [ "h0" ] ],
+    [ "servo1:GND", "uno:GND.2", "black", [ "h240", "v-96" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v124.8", "h296.8" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v134.4", "h422" ] ],
+    [ "pot1:GND", "uno:GND.3", "black", [ "v105.6", "h336" ] ],
+    [ "btn1:1.l", "uno:2", "green", [ "h-38.4", "v-124.8", "h-115.2" ] ],
+    [ "btn1:2.l", "uno:GND.1", "green", [ "h-96", "v-191.8", "h0" ] ]
+  ],
+  "dependencies": {}
+}
